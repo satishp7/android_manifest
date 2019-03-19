@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="fdroid" fetch="https://gitlab.com/FreeMobileOS/" />
+	<project path="packages/apps/FDroidPrivilegedExtension"
+		name="privileged-extension.git" remote="fdroid"
+		revision="fmo-0.2.7" />
+</manifest>

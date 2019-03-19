@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<!-- fmo remote -->
+    <remote name="fmo" fetch="https://github.com/FreeMobileOS" />
+    <remote name="fmogl" fetch="https://gitlab.com/FreeMobileOS" />
+
+	<!-- lineageos remote -->
+	<remote name="lineageos" fetch="https://github.com/LineageOS" />
+
+	<!-- linaro remote -->
+	<remote name="linaro" fetch="https://android-git.linaro.org/git/" review="android-review.linaro.org" />
+
+    <!-- CAF remote -->
+    <remote  name="caf" fetch="https://source.codeaurora.org/" />
+
+    <!-- Github remote -->
+    <remote name="github" fetch="https://github.com/" />
+
+	<!-- Add repo from non-aosp port -->
+    <!-- external -->
+    <project path="external/fuse" name="LineageOS/android_external_fuse" remote="github" revision="lineage-15.0" />
+    <project path="external/htop" name="LineageOS/android_external_htop" remote="github" revision="lineage-16.0" />
+    <project path="external/libncurses" name="LineageOS/android_external_libncurses" remote="github" revision="lineage-16.0" />
+    <project path="external/connectivity" name="LineageOS/android_external_connectivity" remote="github" revision="lineage-15.0" />
+    <project path="external/bson" name="LineageOS/android_external_bson" remote="github" revision="cm-14.1" />
+	<project path="external/libnfc-nxp" name="external/gigabyte/platform/external/libnfc-nxp" remote="caf" revision="caf/LA.AF.1.1.1_rb1.18" />
+    <project path="external/ant-wireless/ant_native" name="LineageOS/android_external_ant-wireless_ant_native" remote="github" revision="lineage-16.0"/>
+    <project path="external/ant-wireless/ant_service" name="LineageOS/android_external_ant-wireless_ant_service" remote="github" revision="lineage-16.0"/>
+    <project path="external/ant-wireless/antradio-library" name="LineageOS/android_external_ant-wireless_antradio-library" remote="github" revision="lineage-16.0"/>
+    <project path="external/drm_hwcomposer" name="android_external_drm_hwcomposer" remote="fmo" revision="fmo-9" />
+
+    <!-- system -->
+    <project path="system/qcom" name="LineageOS/android_system_qcom" remote="github" revision="lineage-16.0" />
+    <project path="system/bt" name="platform_system_bt" remote="fmo" revision="fmo-9_r34" />
+
+    <!-- sepolicy -->
+    <project path="device/qcom/common" name="LineageOS/android_device_qcom_common" remote="github" revision="staging/lineage-15.1" />
+    <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" remote="github" revision="lineage-16.0" />
+
+    <!-- hardware -->
+    <project path="hardware/interfaces" name="LineageOS/android_hardware_interfaces" remote="github" revision="lineage-16.0" />
+    <project path="hardware/qcom/audio-caf/msm8996" name="LineageOS/android_hardware_qcom_audio" remote="github" revision="lineage-16.0-caf-8996" />
+    <project path="hardware/qcom/audio-caf/msm8994" name="LineageOS/android_hardware_qcom_audio" remote="github" revision="lineage-16.0-caf-8994" />
+    <project path="hardware/qcom/bt-caf" name="LineageOS/android_hardware_qcom_bt" remote="github" revision="lineage-16.0-caf" />
+    <project path="hardware/qcom/media-caf/msm8996" name="LineageOS/android_hardware_qcom_media" remote="github" revision="lineage-16.0-caf-8996" />
+    <project path="hardware/qcom/media-caf/msm8994" name="LineageOS/android_hardware_qcom_media" remote="github" revision="lineage-16.0-caf-8994" />
+    <project path="hardware/qcom/power" name="LineageOS/android_hardware_qcom_power" remote="github" revision="staging/lineage-15.1" />
+
+    <project path="hardware/qcom/display-caf/msm8996" name="android_hardware_qcom_display-caf" remote="fmo" revision="fmo-caf-8996" />
+    <project path="hardware/qcom/fm" name="hardware_qcom_fm" remote="fmo" revision="fmo-9" />
+
+    <!-- vendor -->
+    <project path="vendor/aosp" name="vendor_aosp" remote="fmo" revision="fmo-8.1.0" />
+    <project path="vendor/extras" name="vendor_extras" remote="fmo" revision="fmo-9" />
+    <project path="vendor/fmo" name="vendor_fmo" remote="fmo" revision="master"/>
+    <project path="vendor/qcom/opensource/cryptfs_hw" name="LineageOS/android_vendor_qcom_opensource_cryptfs_hw" remote="github" revision="lineage-16.0"/>
+    <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" remote="github" revision="lineage-16.0" />
+    <project path="vendor/codeaurora/telephony" name="LineageOS/android_vendor_codeaurora_telephony" remote="github" revision="lineage-16.0" />
+    <project path="vendor/qcom/opensource/interfaces" name="LineageOS/android_vendor_qcom_opensource_interfaces" remote="github" revision="staging/lineage-15.1">
+        <copyfile src="Android.bp" dest="vendor/qcom/opensource/Android.bp" />
+    </project>
+
+    <!-- general repos -->
+     <project path="build/make" name="platform_build" remote="fmo" revision="fmo-9" >
+        <copyfile src="core/root.mk" dest="Makefile" />
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
+    </project>
+
+	<!-- frameworks repos -->
+    <project path="frameworks/base" name="platform_frameworks_base" remote="fmo" revision="fmo-9_r34" />
+    <project path="frameworks/av" name="android_frameworks_av" remote="fmo" revision="fmo-9_r34" />
+    <project path="frameworks/native" name="android_frameworks_native" remote="fmo" revision="fmo-9" />
+
+	<!-- Packages repos -->
+	<project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" remote="fmo" revision="fmo-8.1.0" /> 
+	<project path="packages/apps/FMRadio" name="LineageOS/android_packages_apps_FMRadio" remote="github" revision="lineage-16.0" />
+    <project path="packages/apps/prebuilt" name="platform_packages_apps_prebuilt" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/forecastie" name="platform_packages_apps_prebuilt_forecastie" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/signal" name="platform_packages_apps_prebuilt_signal" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/AntennaPod" name="platform_packages_apps_prebuilt_AntennaPod" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/chromium" name="platform_packages_apps_prebuilt_chromium" remote="fmogl" revision="master" />
+    <project path="packages/apps/prebuilt/omim" name="platform_packages_apps_prebuilt_omim" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/mpv" name="platform_packages_apps_prebuilt_mpv" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/k9mail" name="platform_packages_apps_prebuilt_k9mail" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/open-keychain" name="platform_packages_apps_prebuilt_open-keychain" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/vlc" name="platform_packages_apps_prebuilt_vlc" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/mintube" name="platform_packages_apps_prebuilt_mintube" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/passandroid" name="platform_packages_apps_prebuilt_passandroid" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/wire" name="platform_packages_apps_prebuilt_wire" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/openlauncher" name="platform_packages_apps_prebuilt_openlauncher" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/lawnchair" name="platform_packages_apps_prebuilt_lawnchair" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/silence" name="platform_packages_apps_prebuilt_silence" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/yalpstore" name="platform_packages_apps_prebuilt_yalpstore" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/kisslauncher" name="platform_packages_apps_prebuilt_kisslauncher" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/opencamera" name="platform_packages_apps_prebuilt_opencamera" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/leafpic" name="platform_packages_apps_prebuilt_leafpic" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/fdroidclient" name="platform_packages_apps_prebuilt_fdroidclient" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/apkmirror" name="platform_packages_apps_prebuilt_apkmirror" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/kdeconnect" name="platform_packages_apps_prebuilt_kdeconnect" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/gmscore" name="platform_packages_apps_prebuilt_gmscore" remote="fmo" revision="8.1.0-mido-stagging" />
+    <project path="packages/apps/prebuilt/gsfproxy" name="platform_packages_apps_prebuilt_gsfproxy" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/fakestore" name="platform_packages_apps_prebuilt_fakestore" remote="fmo" revision="8.1.0-mido-stagging" />
+    <project path="packages/apps/prebuilt/nominatim-nlpbackend" name="platform_packages_apps_prebuilt_nominatimnlpbackend" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/ichnaea-nlpbackend" name="platform_packages_apps_prebuilt_mozillanlpbackend" remote="fmo" revision="master" />
+    <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="fmo" revision="fmo-9" />
+    <project path="packages/apps/prebuilt/newpipe" name="platform_packages_apps_prebuilt_newpipe" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/amazefilemanager" name="platform_packages_apps_prebuilt_amazefilemanager" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/davx5" name="platform_packages_apps_prebuilt_davx5" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/flitetts" name="platform_packages_apps_prebuilt_flitetts" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/simple-app-launcher" name="platform_packages_apps_prebuilt_simpleapplauncher" remote="fmo" revision="master" />
+    <!-- LineageOS has a nicer Terminal app than AOSP -->
+    <project path="packages/apps/Terminal" name="android_packages_apps_Terminal" remote="lineageos" revision="lineage-16.0" />
+
+</manifest>
