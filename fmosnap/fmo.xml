@@ -117,4 +117,6 @@
     <!-- LineageOS has a nicer Terminal app than AOSP -->
     <project path="packages/apps/Terminal" name="android_packages_apps_Terminal" remote="lineageos" revision="lineage-16.0" />
 
+    <!-- FMO device specific patchset -->
+    <project path="fmo-android-patchset" name="fmo_android_patchset" remote="fmo" revision="fmo-9" />
 </manifest>
