@@ -52,8 +52,8 @@
 
     <!-- vendor -->
     <project path="vendor/aosp" name="vendor_aosp" remote="fmo" revision="fmo-8.1.0" />
-    <project path="vendor/extras" name="vendor_extras" remote="fmo" revision="fmo-9" />
-    <project path="vendor/fmo" name="vendor_fmo" remote="fmo" revision="master"/>
+    <project path="vendor/extras" name="vendor_extras" remote="fmo" revision="fmo-9-unidev" />
+    <project path="vendor/fmo" name="vendor_fmo" remote="fmo" revision="fmo-9-unidev"/>
     <project path="vendor/qcom/opensource/cryptfs_hw" name="LineageOS/android_vendor_qcom_opensource_cryptfs_hw" remote="github" revision="lineage-16.0"/>
     <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" remote="github" revision="lineage-16.0" />
     <project path="vendor/codeaurora/telephony" name="LineageOS/android_vendor_codeaurora_telephony" remote="github" revision="lineage-16.0" />
@@ -62,7 +62,7 @@
     </project>
 
     <!-- general repos -->
-     <project path="build/make" name="platform_build" remote="fmo" revision="fmo-9" >
+     <project path="build/make" name="platform_build" remote="fmo" revision="fmo-9-unidev" >
         <copyfile src="core/root.mk" dest="Makefile" />
         <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
         <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -119,4 +119,5 @@
 
     <!-- FMO device specific patchset -->
     <project path="fmo-android-patchset" name="fmo_android_patchset" remote="fmo" revision="fmo-9" />
+
 </manifest>
