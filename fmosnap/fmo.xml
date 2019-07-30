@@ -32,7 +32,7 @@
 
     <!-- system -->
     <project path="system/qcom" name="LineageOS/android_system_qcom" remote="github" revision="lineage-16.0" />
-    <project path="system/bt" name="platform_system_bt" remote="fmo" revision="fmo-9_r34" />
+    <project path="system/bt" name="platform_system_bt" remote="fmo" revision="fmo-9" />
 
     <!-- sepolicy -->
     <project path="device/qcom/common" name="LineageOS/android_device_qcom_common" remote="github" revision="staging/lineage-15.1" />
@@ -73,8 +73,8 @@
     </project>
 
 	<!-- frameworks repos -->
-    <project path="frameworks/base" name="platform_frameworks_base" remote="fmo" revision="fmo-9_r34" />
-    <project path="frameworks/av" name="android_frameworks_av" remote="fmo" revision="fmo-9_r34" />
+    <project path="frameworks/base" name="platform_frameworks_base" remote="fmo" revision="fmo-9" />
+    <project path="frameworks/av" name="android_frameworks_av" remote="fmo" revision="fmo-9" />
     <project path="frameworks/native" name="android_frameworks_native" remote="fmo" revision="fmo-9" />
 
 	<!-- Packages repos -->
@@ -103,9 +103,9 @@
     <project path="packages/apps/prebuilt/fdroidclient" name="platform_packages_apps_prebuilt_fdroidclient" remote="fmo" revision="master" />
     <project path="packages/apps/prebuilt/apkmirror" name="platform_packages_apps_prebuilt_apkmirror" remote="fmo" revision="master" />
     <project path="packages/apps/prebuilt/kdeconnect" name="platform_packages_apps_prebuilt_kdeconnect" remote="fmo" revision="master" />
-    <project path="packages/apps/prebuilt/gmscore" name="platform_packages_apps_prebuilt_gmscore" remote="fmo" revision="8.1.0-mido-stagging" />
+    <project path="packages/apps/prebuilt/gmscore" name="platform_packages_apps_prebuilt_gmscore" remote="fmo" revision="master" />
     <project path="packages/apps/prebuilt/gsfproxy" name="platform_packages_apps_prebuilt_gsfproxy" remote="fmo" revision="master" />
-    <project path="packages/apps/prebuilt/fakestore" name="platform_packages_apps_prebuilt_fakestore" remote="fmo" revision="8.1.0-mido-stagging" />
+    <project path="packages/apps/prebuilt/fakestore" name="platform_packages_apps_prebuilt_fakestore" remote="fmo" revision="master" />
     <project path="packages/apps/prebuilt/nominatim-nlpbackend" name="platform_packages_apps_prebuilt_nominatimnlpbackend" remote="fmo" revision="master" />
     <project path="packages/apps/prebuilt/ichnaea-nlpbackend" name="platform_packages_apps_prebuilt_mozillanlpbackend" remote="fmo" revision="master" />
     <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="fmo" revision="fmo-9" />
@@ -116,6 +116,7 @@
     <project path="packages/apps/prebuilt/simple-app-launcher" name="platform_packages_apps_prebuilt_simpleapplauncher" remote="fmo" revision="master" />
     <project path="packages/apps/prebuilt/chromium-customization-provider" name="platform_packages_apps_prebuilt_chromium_customization_provider" remote="fmo" revision="master" />
     <project path="packages/apps/prebuilt/nextcloud" name="platform_packages_apps_prebuilt_nextcloud" remote="fmo" revision="master" />
+    <project path="packages/apps/prebuilt/pdfviewer" name="platform_packages_apps_prebuilt_pdfviewer" remote="fmo" revision="master" />
     <!-- LineageOS has a nicer Terminal app than AOSP -->
     <project path="packages/apps/Terminal" name="android_packages_apps_Terminal" remote="lineageos" revision="lineage-16.0" />
 
