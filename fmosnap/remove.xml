@@ -90,5 +90,6 @@
 
     <!-- External repos -->
     <remove-project name="platform/external/drm_hwcomposer" />
+    <remove-project name="platform/external/chromium-webview" />
 
 </manifest>
